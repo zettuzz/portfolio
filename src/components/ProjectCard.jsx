@@ -13,7 +13,7 @@ const ProjectCard = ({ title, description, image, tags, link }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="project-image">
-        <img src={image || "/src/assets/placeholder.svg"} alt={title} />
+        <img src={image || "/assets/placeholder.svg"} alt={title} />
         <div className="project-overlay">
           <a href={link} target="_blank" rel="noopener noreferrer" className="view-project">
             View Project

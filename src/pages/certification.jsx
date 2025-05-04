@@ -8,11 +8,11 @@ const Certification = () => {
   const [filter, setFilter] = useState("all")
 
   const trainingPhotos = [
-    { id: 1, image: "/src/assets/cert/1.jfif" },
-    { id: 2, image: "/src/assets/cert/2.jfif" },
-    { id: 3, image: "/src/assets/cert/3.jfif" },
-    { id: 4, image: "/src/assets/cert/4.jfif" },
-    { id: 5, image: "/src/assets/cert/5.jfif" },
+    { id: 1, image: "/assets/cert/1.jfif" },
+    { id: 2, image: "/assets/cert/2.jfif" },
+    { id: 3, image: "/assets/cert/3.jfif" },
+    { id: 4, image: "/assets/cert/4.jfif" },
+    { id: 5, image: "/assets/cert/5.jfif" },
   ]
 
   const filteredPhotos = filter === "all" ? trainingPhotos : trainingPhotos.filter((photo) => photo.category === filter)
@@ -28,7 +28,7 @@ const Certification = () => {
         {filteredPhotos.map((photo) => (
           <div className="photo-card" key={photo.id}>
             <div className="photo-image">
-              <img src={photo.image || "/src/assets/placeholder.svg"} alt={`Training session ${photo.id}`} />
+              <img src={photo.image || "/assets/placeholder.svg"} alt={`Training session ${photo.id}`} />
             </div>
           </div>
         ))}

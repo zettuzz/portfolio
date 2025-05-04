@@ -8,12 +8,12 @@ const TrainingEvidence = () => {
   const [filter, setFilter] = useState("all")
 
   const trainingPhotos = [
-    { id: 1, image: "/src/assets/photo/1.jfif" },
-    { id: 2, image: "/src/assets/photo/2.jfif" },
-    { id: 3, image: "/src/assets/photo/3.jfif" },
-    { id: 4, image: "/src/assets/photo/4.jfif" },
-    { id: 5, image: "/src/assets/photo/5.jfif" },
-    { id: 6, image: "/src/assets/photo/6.jfif" },
+    { id: 1, image: "/assets/photo/1.jfif" },
+    { id: 2, image: "/assets/photo/2.jfif" },
+    { id: 3, image: "/assets/photo/3.jfif" },
+    { id: 4, image: "/assets/photo/4.jfif" },
+    { id: 5, image: "/assets/photo/5.jfif" },
+    { id: 6, image: "/assets/photo/6.jfif" },
   ]
 
   const filteredPhotos = filter === "all" ? trainingPhotos : trainingPhotos.filter((photo) => photo.category === filter)
@@ -30,7 +30,7 @@ const TrainingEvidence = () => {
         {filteredPhotos.map((photo) => (
           <div className="evidence-card" key={photo.id}>
             <div className="evidence-image">
-              <img src={photo.image || "/src/assets/placeholder.svg"} alt={`Training session ${photo.id}`} />
+              <img src={photo.image || "/assets/placeholder.svg"} alt={`Training session ${photo.id}`} />
             </div>
           </div>
         ))}
