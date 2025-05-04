@@ -537,14 +537,14 @@ export default function OJTDashboard() {
               <span className="info-value">School of Accountancy</span>
             </div>
             <div className="info-item">
-              <span className="info-label">Hours Completed:</span>
-              <span className="info-value">486</span>
+              <span className="info-label">Hours Rendered:</span>
+              <span className="info-value">486 hours</span>
             </div>
           </div>
           <div className="info-row">
             <div className="info-item">
-              <span className="info-label">The report covers the following dates:</span>
-              <span className="info-value">From: January 21- May 02, 2025</span>
+              <span className="info-label">Report Coverage:</span>
+              <span className="info-value">January 21, 2025 – May 02, 2025</span>
             </div>
           </div>
         </div>
@@ -554,18 +554,56 @@ export default function OJTDashboard() {
             <thead>
               <tr>
                 <th>Objectives</th>
-                <th>Work Status</th>
-                <th>Problems Met</th>
+                <th>Met</th>
+                <th>Not Met</th>
               </tr>
             </thead>
             <tbody>
-              {objectivesData.map((row, index) => (
-                <tr key={index}>
-                  <td>{row.objective}</td>
-                  <td>{row.status}</td>
-                  <td>{row.problems}</td>
-                </tr>
-              ))}
+              <tr>
+                <td>1. Enhance proper work habits and attitudes in the workplace.</td>
+                <td>Yes</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>2. Understand the organization and how tasks are accomplished.</td>
+                <td>Yes</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>3. Apply knowledge and skills to real-life work situations.</td>
+                <td>Yes</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>4. Learn skills related to my future career.</td>
+                <td>Yes</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>5. Develop critical thinking and decision-making abilities.</td>
+                <td>Yes</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>6. Demonstrate enthusiasm and motivation.</td>
+                <td>Yes</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>7. Communicate effectively.</td>
+                <td>Yes</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>8. Maintain confidentiality and act ethically.</td>
+                <td>Yes</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>9. Display professionalism in all internship activities.</td>
+                <td>Yes</td>
+                <td>No</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -600,73 +638,54 @@ export default function OJTDashboard() {
           <div className="info-row">
             <div className="info-item">
               <span className="info-label">Name:</span>
-              <span className="info-value">RAMOS, RICA MAE G.</span>
+              <span className="info-value">Rica Mae G. Ramos</span>
             </div>
             <div className="info-item">
               <span className="info-label">Date:</span>
-              <span className="info-value">MAY 02, 2025</span>
+              <span className="info-value">May 02, 2025</span>
             </div>
           </div>
           <div className="info-row">
             <div className="info-item">
               <span className="info-label">Internship Site:</span>
-              <span className="info-value">SCHOOL OF ACCOUNTANCY</span>
+              <span className="info-value">School of Accountancy</span>
             </div>
           </div>
         </div>
 
         <div className="analysis-section">
-          <h3>1. Setting</h3>
+          <h3>Setting</h3>
           <p>
-            The office is spacious, well-lit, and equipped with the latest technology. The company has a diverse
-            workforce consisting of highly skilled and experienced professionals.
+            The work environment was organized and conducive to learning. The office layout and team structure allowed for smooth collaboration. My tasks were varied and helped me understand how different departments function.
           </p>
-          <p>
-            The work environment is friendly, and employees have access to all the resources they need to perform their
-            duties.
-          </p>
-          <p>My initial analysis of the agency or organization was good overall.</p>
         </div>
 
         <div className="analysis-section">
-          <h3>2. Site Supervisor</h3>
-          <p>The greatest contribution made by the site supervisor was guiding and motivating for my future.</p>
-          <p>The general level of supervision was to obey their policies.</p>
-          <p>My initial analysis to our site supervisor was excellent overall.</p>
+          <h3>Site Supervisor</h3>
+          <p>
+            My supervisor was approachable and supportive. She gave clear instructions and corrected me when needed. Her guidance helped me grow professionally.
+          </p>
         </div>
 
         <div className="analysis-section">
-          <h3>3. Environmental conditions or events…</h3>
+          <h3>Environmental Conditions or Events</h3>
           <p>
-            The one event/characteristic that really influenced my internship was being polite of all the people around
-            you, and always smile.
+            The workplace was safe, quiet, and well-ventilated. Office resources were available and functional. There were no unexpected events that disrupted operations.
           </p>
-          <p>A tend/issue which really impacted this organization was the inventory management.</p>
-          <p>Diversity of co-workers or target audiences provided an opportunity to improve myself.</p>
         </div>
 
         <div className="analysis-section">
-          <h3>4. Self-Assessment</h3>
+          <h3>Self-Assessment</h3>
           <p>
-            The most important thing I learned is time management well greatly contribute to make my future work and co-
-            worker be proud of.
+            The internship allowed me to gain real-world experience. I improved my communication, organization, and time management skills. I feel more confident and prepared for future employment. I'm proud of the progress I made during this internship.
           </p>
-          <p>I contributed to the organization by doing well all the task given to me.</p>
-          <p>I still need more experience in the area of networking.</p>
-          <p>If I were to repeat this experience I would still do the same but with lots improvements.</p>
         </div>
 
         <div className="analysis-section">
-          <h3>5. General</h3>
+          <h3>General</h3>
           <p>
-            The internship experience can be strengthened by giving much more works in the agency or having rotation of
-            agency.
+            This internship has been a very insightful and productive experience. I learned the importance of teamwork and professionalism. I hope to continue learning and growing in my career journey.
           </p>
-          <p>
-            Future interns should think before you speak with your supervisor, because it will reflect to your overall
-            personality.
-          </p>
-          <p className="note">Note: This analysis need not to be shared with the site supervisor.</p>
         </div>
       </section>
 
