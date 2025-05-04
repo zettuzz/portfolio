@@ -9,7 +9,7 @@ const Home = () => {
           {/* Image on the left */}
           <div className="hero-image">
             <img
-              src="./src/assets/aboutme.png"
+              src="/src/assets/aboutme.png"
               alt="Profile"
               className="hero-profile-image"
             />
