@@ -4,7 +4,7 @@ import { useForm, ValidationError } from "@formspree/react"
 import "./Contact.css"
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("xzzrewgl") // Your Formspree form ID
+  const [state, handleSubmit] = useForm("xnndpynp") // Your Formspree form ID
 
   return (
     <section className="contact">
@@ -17,7 +17,7 @@ const Contact = () => {
         <div className="contact-info">
           <div className="info-item">
             <h3>Email</h3>
-            <p>rmaeg0215@gmail.com</p>
+            <p>rmaerg0215@gmail.com</p>
           </div>
           <div className="info-item">
             <h3>Phone</h3>
