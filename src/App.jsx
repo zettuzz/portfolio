@@ -11,7 +11,9 @@ import Experience from "./pages/experience"
 import Certification from "./pages/certification"
 import CVPage from "./pages/cv-page"
 import Dashboard from "./pages/ojt-dashboard"
+import History from "./pages/History"
 import "./App.css"
+import Proof from "./pages/proof"
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
             <Route path="/certification" element={<Certification />} />
             <Route path="/introduction" element={<Introduction />} /> {/* ← FIX */}
             <Route path="/ojt-dashboard" element={<Dashboard />} />
+            <Route path="/proof" element={<Proof />} />
+            <Route path="/history" element={<History />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

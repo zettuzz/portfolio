@@ -1,0 +1,102 @@
+.introduction {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+    width: 100%;
+  }
+  
+  .introduction-container {
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .introduction h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .introduction-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .introduction-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .introduction-section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  .introduction-section ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .introduction-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  
+  .internship-details {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+  }
+  
+  .detail-row {
+    display: flex;
+    margin-bottom: 0.75rem;
+  }
+  
+  .detail-label {
+    font-weight: 600;
+    min-width: 120px;
+    flex-shrink: 0;
+  }
+  
+  .detail-value {
+    flex-grow: 1;
+  }
+  
+  /* Updated to match ack.css styling */
+  .navigation-button {
+    margin-top: 2rem;
+  }
+  
+  .back-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #222222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #222222;
+  }
+  
+  @media (max-width: 768px) {
+    .introduction {
+      padding: 2rem 1rem;
+    }
+  
+    .detail-row {
+      flex-direction: column;
+    }
+  
+    .detail-label {
+      margin-bottom: 0.25rem;
+    }
+  }
+  

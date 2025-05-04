@@ -1,60 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useForm, ValidationError } from "@formspree/react"
 import "./Contact.css"
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
-
-  const [formStatus, setFormStatus] = useState({
-    submitted: false,
-    error: false,
-    message: "",
-  })
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }))
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
-    // Validate form
-    if (!formData.name || !formData.email || !formData.message) {
-      setFormStatus({
-        submitted: false,
-        error: true,
-        message: "Please fill in all required fields.",
-      })
-      return
-    }
-
-    // Here you would typically send the form data to a server
-    // For this example, we'll just simulate a successful submission
-
-    setFormStatus({
-      submitted: true,
-      error: false,
-      message: "Thank you for your message! I will get back to you soon.",
-    })
-
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    })
-  }
+  const [state, handleSubmit] = useForm("xzzrewgl") // Your Formspree form ID
 
   return (
     <section className="contact">
@@ -67,70 +17,50 @@ const Contact = () => {
         <div className="contact-info">
           <div className="info-item">
             <h3>Email</h3>
-            <p>hello@yourportfolio.com</p>
+            <p>rmaeg0215@gmail.com</p>
           </div>
           <div className="info-item">
-            <h3>Location</h3>
-            <p>San Francisco, CA</p>
+            <h3>Phone</h3>
+            <p>09056010604</p>
           </div>
           <div className="info-item">
-            <h3>Social</h3>
-            <div className="social-links">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                GitHub
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                Twitter
-              </a>
-            </div>
+            <h3>Address</h3>
+            <p>Ligaya, Sablayan, Occidental Mindoro</p>
           </div>
         </div>
 
         <div className="contact-form-container">
-          {formStatus.submitted ? (
+          {state.succeeded ? (
             <div className="form-success">
-              <p>{formStatus.message}</p>
+              <p>Thank you for your message! I will get back to you soon.</p>
             </div>
           ) : (
             <form className="contact-form" onSubmit={handleSubmit}>
-              {formStatus.error && (
-                <div className="form-error">
-                  <p>{formStatus.message}</p>
-                </div>
-              )}
-
               <div className="form-group">
                 <label htmlFor="name">Name *</label>
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+                <input id="name" type="text" name="name" required />
+                <ValidationError prefix="Name" field="name" errors={state.errors} />
               </div>
 
               <div className="form-group">
                 <label htmlFor="email">Email *</label>
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+                <input id="email" type="email" name="email" required />
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
               </div>
 
               <div className="form-group">
                 <label htmlFor="subject">Subject</label>
-                <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} />
+                <input id="subject" type="text" name="subject" />
               </div>
 
               <div className="form-group">
                 <label htmlFor="message">Message *</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                ></textarea>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <ValidationError prefix="Message" field="message" errors={state.errors} />
               </div>
 
-              <button type="submit" className="submit-btn">
-                Send Message
+              <button type="submit" className="submit-btn" disabled={state.submitting}>
+                {state.submitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           )}

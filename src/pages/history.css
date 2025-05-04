@@ -1,0 +1,125 @@
+.history {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+  width: 100%;
+}
+
+.history-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.history h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.history-section {
+  margin-bottom: 3rem;
+}
+
+.history-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 0.5rem;
+}
+
+.subsection {
+  margin-bottom: 2rem;
+}
+
+.subsection h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #444;
+  font-weight: 600;
+}
+
+.history-section p,
+.subsection p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.core-values {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.core-value-item {
+  background-color: #f9f9f9;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 4px solid #222222;
+}
+
+.core-value-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.core-value-letter {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222222;
+  margin-right: 0.5rem;
+}
+
+.core-value-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.core-value-dash {
+  margin: 0 0.5rem;
+}
+
+.core-value-description {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.acknowledgement-button {
+  margin-top: 2rem;
+}
+
+.back-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #222222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #222222;
+}
+
+@media (max-width: 768px) {
+  .history {
+    padding: 2rem 1rem;
+  }
+
+  .core-value-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .core-value-letter {
+    margin-bottom: 0.25rem;
+  }
+}

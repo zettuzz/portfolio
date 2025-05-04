@@ -2,52 +2,66 @@
 
 import { Link } from "react-router-dom"
 import "./About.css"
-import { BookOpen, Info, Award, FileText, BadgeCheck, BookMarked, ClipboardList, ImageIcon } from "lucide-react"
+import { BookOpen, Info, Award, FileText, BadgeCheck, BookMarked, ClipboardList, ImageIcon, History, Clock, RefreshCcw } from "lucide-react"
 
 const About = () => {
   const sections = [
     {
       id: "introduction",
-      title: "II. Introduction",
+      title: "Introduction",
       icon: <Info size={40} />,
       path: "/introduction",
     },
     {
+      id: "history",
+      title: "History",
+      icon: <History size={40} />,
+      path: "/History",
+    },
+
+    {
       id: "acknowledgement",
-      title: "III. Acknowledgement",
+      title: "Acknowledgement",
       icon: <Award size={40} />,
       path: "/acknowledgement",
     },
     {
       id: "cv",
-      title: "IV. Curriculum Vitae of the Student",
+      title: "Curriculum Vitae of the Student",
       icon: <FileText size={40} />,
       path: "/cv-page",
     },
     {
       id: "certificate",
-      title: "V. Certificate of Completion",
+      title: "Certificate of Completion",
       icon: <BadgeCheck size={40} />,
       path: "/certification",
     },
     {
+      id: "proof photos",
+      title: "Verification Images",
+      icon: <ImageIcon size={40} />,
+      path: "/proof",
+    },
+    {
+      id: "photos",
+      title: "Photo Evidence During Practice Training",
+      icon: <ImageIcon size={40} />,
+      path: "/TrainingEvidence",
+    },
+    {
       id: "experiences",
-      title: "VI. Experiences and Reflections",
+      title: "Experiences and Reflections",
       icon: <BookMarked size={40} />,
       path: "/experience",
     },
     {
       id: "evaluation",
-      title: "VII. Evaluation Sheets",
+      title: "Evaluation Sheets",
       icon: <ClipboardList size={40} />,
       path: "/ojt-dashboard",
     },
-    {
-      id: "photos",
-      title: "VIII. Photo Evidence During Practice Training",
-      icon: <ImageIcon size={40} />,
-      path: "/TrainingEvidence",
-    },
+  
   ]
 
   return (
