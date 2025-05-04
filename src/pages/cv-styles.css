@@ -1,0 +1,193 @@
+/* CV Page Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+.cv-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cv-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #333;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-text {
+  text-align: left;
+  flex: 1;
+}
+
+.cv-header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cv-header p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.profile-image-container {
+  flex-shrink: 0;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cv-section {
+  margin-bottom: 30px;
+}
+
+.cv-section h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+.personal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.info-item {
+  margin-bottom: 8px;
+}
+
+.info-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.education-item,
+.experience-item {
+  margin-bottom: 20px;
+}
+
+.education-item h3,
+.experience-item h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.institution,
+.company,
+.degree {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.location,
+.year {
+  color: #666;
+  margin-bottom: 3px;
+}
+
+.skills-list {
+  list-style-position: inside;
+  margin-left: 20px;
+}
+
+.skills-list li {
+  margin-bottom: 5px;
+}
+
+.cv-footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.certification {
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.signature {
+  margin-top: 50px;
+}
+
+.signature p {
+  font-weight: bold;
+}
+
+.applicant {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.cv-button {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.back-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #222222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cv-container {
+    padding: 20px;
+  }
+
+  .personal-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-header h1 {
+    font-size: 24px;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+}

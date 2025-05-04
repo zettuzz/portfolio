@@ -1,0 +1,499 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.ojt-dashboard-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Organizational Structure Section */
+.org-structure-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.org-structure-section h2 {
+  margin-bottom: 1.5rem;
+  color: #222222;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.content-section {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section p {
+  margin-bottom: 1.5rem;
+}
+
+/* Clickable text styles */
+.clickable-text {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  background-color: #222222;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.clickable-text:hover {
+  background-color: #111111;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clickable-text:active {
+  transform: translateY(0);
+}
+
+.clickable-text span {
+  font-weight: bold;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: #c0392b;
+  transform: scale(1.1);
+}
+
+.modal-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.image-caption {
+  margin-top: 1rem;
+  text-align: center;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+/* OJT Report Section */
+.ojt-report-section {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Header styles */
+.report-header,
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #333;
+}
+
+.report-header h1,
+.section-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #222222;
+}
+
+.report-header h2,
+.section-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #222222;
+}
+
+.report-header h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #222222;
+}
+
+.report-header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Month tabs */
+.month-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.month-tab {
+  padding: 0.5rem 1rem;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.month-tab:hover {
+  background-color: #dee2e6;
+}
+
+.month-tab.active {
+  background-color: #222222;
+  color: white;
+  border-color: #222222;
+}
+
+/* Table styles */
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.report-table,
+.progress-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #dee2e6;
+}
+
+.report-table th,
+.report-table td,
+.progress-table th,
+.progress-table td {
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+  text-align: left;
+  vertical-align: top;
+}
+
+.report-table th,
+.progress-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.month-header {
+  background-color: #222222 !important;
+  color: white;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.report-table tr:nth-child(even),
+.progress-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.report-table tr:hover,
+.progress-table tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Signature section */
+.signature-section {
+  margin-top: 3rem;
+}
+
+.signature-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.signature-block {
+  text-align: center;
+  min-width: 200px;
+}
+
+.signature-name {
+  font-weight: bold;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 0.5rem;
+}
+
+.signature-title {
+  font-style: italic;
+}
+
+.signature-date {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Daily Time Record Section */
+.dtr-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.dtr-content {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.dtr-content h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  color: #222222;
+}
+
+.dtr-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  max-width: 800px;
+}
+
+.dtr-image {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dtr-placeholder {
+  padding: 3rem;
+  background-color: #f8f9fa;
+  border: 1px dashed #ced4da;
+  border-radius: 4px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Progress Report Section */
+.progress-report-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.progress-info,
+.analysis-info {
+  margin-bottom: 2rem;
+}
+
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.info-item {
+  margin-right: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Analysis Report Section */
+.analysis-report-section {
+  margin-bottom: 2rem;
+}
+
+.analysis-section {
+  margin-bottom: 2rem;
+}
+
+.analysis-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #222222;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+
+.analysis-section p {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.note {
+  font-style: italic;
+  color: #6c757d;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ojt-dashboard-container {
+    padding: 1rem;
+  }
+
+  .org-structure-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .content-section {
+    padding: 1.5rem;
+  }
+
+  .report-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .report-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .report-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .month-tabs {
+    justify-content: center;
+  }
+
+  .signature-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .modal-content {
+    padding: 0.75rem;
+  }
+
+  .close-button {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+
+  .info-row {
+    flex-direction: column;
+  }
+
+  .info-item {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .org-structure-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .report-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .report-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .report-header h3 {
+    font-size: 1rem;
+  }
+
+  .month-tab {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .clickable-text {
+    display: block;
+    width: 100%;
+  }
+
+  .modal-content {
+    max-width: 95%;
+  }
+}
+
+.dashboard-button {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.back-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #222222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
