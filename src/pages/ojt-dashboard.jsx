@@ -408,7 +408,7 @@ export default function OJTDashboard() {
               <button className="close-button" onClick={closeModal}>
                 &times;
               </button>
-              <img src="./src/assets/orgstructure.png" alt="Organizational Structure" className="modal-image" />
+              <img src="/src/assets/orgstructure.png" alt="Organizational Structure" className="modal-image" />
               <div className="image-caption">Company Organizational Structure Chart</div>
             </div>
           </div>
@@ -504,10 +504,10 @@ export default function OJTDashboard() {
           <h3>MONTH OF {activeDtrMonth.toUpperCase()} DTR</h3>
           <div className="dtr-image-container">
             {activeDtrMonth !== "january" && (
-              <img src={`./src/assets/dtr/${activeDtrMonth}-dtr.png`} alt={`${activeDtrMonth} DTR`} className="dtr-image" />
+              <img src={`/src/assets/dtr/${activeDtrMonth}-dtr.png`} alt={`${activeDtrMonth} DTR`} className="dtr-image" />
             )}
             {activeDtrMonth === "january" && (
-              <img src="./src/assets/dtr/january-dtr.png" alt="January DTR" className="dtr-image" />
+              <img src="/src/assets/dtr/january-dtr.png" alt="January DTR" className="dtr-image" />
             )}
           </div>
         </div>

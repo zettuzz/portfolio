@@ -7,7 +7,7 @@ export default function CVPage() {
       <header className="cv-header">
         <div className="header-content">
           <div className="profile-image-container">
-            <img src="./src/assets/cv.png" alt="Rica Mae G. Ramos" className="profile-image" />
+            <img src="/src/assets/cv.png" alt="Rica Mae G. Ramos" className="profile-image" />
           </div>
           <div className="header-text">
             <h1>RICA MAE G. RAMOS</h1>
