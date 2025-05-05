@@ -441,7 +441,7 @@ export default function OJTDashboard() {
             You can view or download the full Weekly Accomplishment Report as a PDF document below.
           </p>
           <a
-            href="/public/Accomplished%20report%20ramos.pdf"
+            href="/public/assets/Accomplished%20report%20ramos.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="clickable-text"
