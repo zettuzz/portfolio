@@ -16,6 +16,7 @@ const Certification = () => {
     { id: 3, image: "/assets/cert/3.jfif" },
     { id: 4, image: "/assets/cert/4.jfif" },
     { id: 5, image: "/assets/cert/5.jfif" },
+    {id: 6, image: "/assets/cert/clearance.jfif"}
   ]
 
   const filteredPhotos = filter === "all" ? trainingPhotos : trainingPhotos.filter((photo) => photo.category === filter)

@@ -429,6 +429,29 @@ export default function OJTDashboard() {
         )}
       </section>
 
+      {/* Weekly Accomplishment Report PDF Section */}
+      <section className="weekly-report-section">
+        <div className="report-header">
+          <h1>WEEKLY ACCOMPLISHMENT REPORT</h1>
+          <h2>OFFICE: SCHOOL OF ACCOUNTANCY</h2>
+          <p>Address: OMSC Labangan, San Jose, Occidental Mindoro</p>
+        </div>
+        <div className="content-section">
+          <p>
+            You can view or download the full Weekly Accomplishment Report as a PDF document below.
+          </p>
+          <a
+            href="/public/Accomplished%20report%20ramos.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="clickable-text"
+            style={{ display: 'inline-block', marginTop: '10px' }}
+          >
+            View Weekly Accomplishment Report (PDF)
+          </a>
+        </div>
+      </section>
+
       {/* OJT Report Section */}
       <section className="ojt-report-section">
         <div className="report-header">
