@@ -14,6 +14,9 @@ export default function OJTDashboard() {
   // State for Organizational Structure modal
   const [isModalOpen, setIsModalOpen] = useState(false)
 
+  // State for Evaluation Form modal
+  const [isEvalModalOpen, setIsEvalModalOpen] = useState(false)
+
   const openModal = () => {
     setIsModalOpen(true)
     document.body.style.overflow = "hidden"
@@ -21,6 +24,17 @@ export default function OJTDashboard() {
 
   const closeModal = () => {
     setIsModalOpen(false)
+    document.body.style.overflow = "auto"
+  }
+
+  // Functions for Evaluation Form modal
+  const openEvalModal = () => {
+    setIsEvalModalOpen(true)
+    document.body.style.overflow = "hidden"
+  }
+
+  const closeEvalModal = () => {
+    setIsEvalModalOpen(false)
     document.body.style.overflow = "auto"
   }
 
@@ -687,6 +701,33 @@ export default function OJTDashboard() {
             This internship has been a very insightful and productive experience. I learned the importance of teamwork and professionalism. I hope to continue learning and growing in my career journey.
           </p>
         </div>
+      </section>
+
+      {/* Student Internship Evaluation Form Section */}
+      <section className="evaluation-form-section">
+        <div className="section-header">
+          <h2>STUDENT INTERNSHIP EVALUATION FORM</h2>
+        </div>
+        <div className="content-section">
+          <p>
+            View the official evaluation form for the internship. This form summarizes the quantitative and qualitative assessment of the internship experience.
+          </p>
+          <button className="clickable-text" onClick={openEvalModal}>
+            View Evaluation Form
+          </button>
+        </div>
+        {/* Modal for displaying the evaluation form image */}
+        {isEvalModalOpen && (
+          <div className="modal-overlay" onClick={closeEvalModal}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <button className="close-button" onClick={closeEvalModal}>
+                &times;
+              </button>
+              <img src="/assets/cert/evalform.jpg" alt="Student Internship Evaluation Form" className="modal-image" />
+              <div className="image-caption">Student Internship Evaluation Form</div>
+            </div>
+          </div>
+        )}
       </section>
 
       <div className="dashboard-button">
